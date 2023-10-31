@@ -1,6 +1,6 @@
 ```python
-Name: Mohanish K
-Reg No: 212222100028
+Mohanish K
+212222100028
 ```
 
 # EXPERIMENT 07 SQUARE WAVE GENERATION AT THE OUTPUT PIN USING TIMER
@@ -22,7 +22,7 @@ The following diagram shows you how the ARR value affects the period (frequency)
 STM32 Timers – PWM Output Channels
 
 Each Capture/Compare channel is built around a capture/compare register (including a shadow register), an input stage for capture (with a digital filter, multiplexing, and Prescaler) and an output stage (with comparator and output control). The output stage generates an intermediate waveform which is then used for reference: OCxRef (active high). The polarity acts at the end of the chain.
-<img height=450 width=450 src=https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/87457b57-4311-440b-8cbe-a9d78db4335a>
+![image](https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/87457b57-4311-440b-8cbe-a9d78db4335a)
 
 STM32 Timers In PWM Mode
 
@@ -40,41 +40,27 @@ In various applications, you’ll be in need to generate a PWM signal with a spe
 The PWM period (1/FPWM) is defined by the following parameters: ARR value, the Prescaler value, and the internal clock itself which drives the timer module FCLK. The formula down below is to be used for calculating the FPWM for the output. You can set the clock you’re using, the Prescaler, and solve for the ARR value in order to control the FPWM and get what you want.
 
 STM32 PWM Frequency Formula - STM32 PWM Frequency Equation
-<img height=450 width=450 src=https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/aca8a20e-9b99-40c1-bada-f31accaa2ae9>
+![image](https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/aca8a20e-9b99-40c1-bada-f31accaa2ae9)
 
 STM32 PWM Duty Cycle
 
 In normal settings, assuming you’re using the timer module in PWM mode and generating PWM signal in edge-aligned mode up-counting configuration. The duty cycle percentage is controlled by changing the value of the CCRx register. And the duty cycle equals (CCRx/ARR) [%].
-<img height=450 width=450 src=https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/58ce0807-331e-49f7-bc8d-373f82592a92>
+![image](https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/58ce0807-331e-49f7-bc8d-373f82592a92)
 
 
 
 ## Procedure:
 Step1: Open CubeMX & Create New Project
- <img height=450 width=450 src=https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png>
-
 
 Step2: Choose The Target MCU & Double-Click Its Name select the target to be programmed  as shown below and click on next 
-
- <img height=450 width=450 src=https://user-images.githubusercontent.com/36288975/226189215-2d13ebfb-507f-44fc-b772-02232e97c0e3.png>
-<img height=450 width=450 src=https://user-images.githubusercontent.com/36288975/226189230-bf2d90dd-9695-4aaf-b2a6-6d66454e81fc.png>
-
-<img height=450 width=450 src=https://user-images.githubusercontent.com/36288975/226189280-ed5dcf1d-dd8d-43ae-815d-491085f4863b.png>
 Step3: Configure Timer2 Peripheral To Operate In PWM Mode With CH1 Output
-<img height=450 width=450 src=https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/682c851a-7dfe-4089-8395-f76088d43896>
-
 
 Step4: Set The RCC External Clock Source
-<img height=450 width=450 src=https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/8888af3b-63e2-4760-a51b-17b477763941>
-
-
 STM32 RCC External Clock Selection CubeMX
 
 Step5: Go To The Clock Configuration
 
 Step6: Set The System Clock To Be 72MHz
-<img height=450 width=450 src=https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/4ea03faa-fb90-4b31-8079-3db5f959f2c3>
-
 
 Step7: Name & Generate The Project Initialization Code For CubeIDE or The IDE You’re Using
 
@@ -86,18 +72,23 @@ We are now at the last part of step by step guide on how to simulate STM32 proje
 Step9. Create a new Proteus project and place STM32F40xx i.e. the same MCU for which the project was created in STM32Cube IDE. 
 14. After creation of the circuit as per requirement as shown below 
 
- <img height=450 width=450 src=https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/4f377f5e-bdda-489e-a416-c712c893831>)
+<img src=https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/4f377f5e-bdda-489e-a416-c712c893831d width=450 height=450>
+
 
 Step10. Double click on the the MCU part to open settings. Next to the Program File option, give full path to the Hex file generated using STM32Cube IDE. Then set the external crystal frequency to 8M (i.e. 8 MHz). Click OK to save the changes.
 
  
 Step14. click on debug and simulate using simulation as shown below 
- <img height=450 width=450 src=https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/b8efbfc2-f0c5-4106-8117-3a6e7ac87f6c>
+<img src=https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/b8efbfc2-f0c5-4106-8117-3a6e7ac87f6c width=450 height=450>
+
+
+
+ 
 
   
 
 ## STM 32 CUBE PROGRAM :
-```c
+```
 #include "main.h"
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
@@ -214,50 +205,51 @@ void assert_failed(uint8_t *file, uint32_t line)
 ```
 
 ## Output screen shots of proteus  :
- <img height=450 width=450 src=https://github.com/R-Udayakumar/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/118708024/84611de2-4f40-40b3-8da3-f62f6ab71eb5)
+ <img src=https://github.com/abinayasangeetha/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/119393675/8b6ede1f-87a0-4c54-81eb-343023dbab4b width=450 height=450>
 
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
-<img height=450 width=450 src=https://github.com/R-Udayakumar/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/118708024/6cd6046c-ffe3-49d5-aa0a-f429e38f41a2)
+ <img src=https://github.com/abinayasangeetha/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/119393675/bdf0f98e-e9c7-428b-a8cc-cabf98e9f6a1 width=450 height=450>
 
 
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
-#### FOR PULSE AT 500
+#### FOR DUTY CYCLE AT 50%:
+
 ```
 TON = 1.75ms
-TOFF = 1.75ms
+TOFF= 1.75ms
 TOTAL TIME = 3.5ms
-PRESCALER = 35
 FREQUENCY = 1/(TOTAL TIME) = 1/3.5ms = 285.7 Hz
-DUTY CYCLE = 50%
+DUTY CYCLE =TON / (TOTAL TIME) * 100 = 50%
 ```
-<img height=450 width=450 src=https://github.com/R-Udayakumar/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/118708024/4a42c3ee-b714-4575-a8e1-293563a30d66>
+<img src=https://github.com/abinayasangeetha/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/119393675/82fccb1c-4ea0-46cf-b9bf-325e71953b48 width=450 height=450>
 
 
-#### FOR PULSE AT 700
+#### FOR DUTY CYCLE AT 60%:
 ```
 TON = 2.75ms
-TOFF = 0.75ms
+TOFF=0.75ms
 TOTAL TIME = 3.5ms
-PRESCALER = 35
 FREQUENCY = 1/(TOTAL TIME) = 1/3.5ms = 285.7 Hz
-DUTY CYCLE = 79%
+DUTY CYCLE =TON / (TOTAL TIME) * 100 = 78.5%
 ```
-<img height=450 width=450 src=https://github.com/R-Udayakumar/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/118708024/943e25a4-4888-486c-9189-94eac095f9f5>
+<img src=https://github.com/abinayasangeetha/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/119393675/d2051991-d124-46cd-b13f-13b7e01ccdea width=450 height=450>
 
 
 
-#### FOR PULSE AT 900
+#### FOR DUTY CYCLE AT 70%:
 ```
 TON = 3ms
-TOFF = 0.5ms
+TOFF=0.5ms
 TOTAL TIME = 3.5ms
-PRESCALER = 35
 FREQUENCY = 1/(TOTAL TIME) = 1/3.5 ms = 285.7 Hz
-DUTY CYCLE = 86%
+DUTY CYCLE = TON / (TOTAL TIME) * 100 = 85.7%
 ```
-<img height=450 width=450 src=https://github.com/R-Udayakumar/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/118708024/117cf566-712c-456f-b7a2-f9401a6a602a>
+<img src=https://github.com/abinayasangeetha/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/119393675/2cfd8286-62f2-4f4f-af71-72b86f89be5f width=450 height=450>
 
 
 ## Result :
 A PWM Signal is generated using the following frequency and various duty cycles are simulated .
+
+
+
