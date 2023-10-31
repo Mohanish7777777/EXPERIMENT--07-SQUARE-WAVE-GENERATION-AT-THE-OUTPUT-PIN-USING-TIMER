@@ -51,16 +51,15 @@ In normal settings, assuming you’re using the timer module in PWM mode and gen
 
 ## Procedure:
 Step1: Open CubeMX & Create New Project
- <img height=450 width=450 src=https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png)
+ <img height=450 width=450 src=https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png>
 
 
 Step2: Choose The Target MCU & Double-Click Its Name select the target to be programmed  as shown below and click on next 
 
- <img height=450 width=450 src=https://user-images.githubusercontent.com/36288975/226189215-2d13ebfb-507f-44fc-b772-02232e97c0e3.png)
-<img height=450 width=450 src=https://user-images.githubusercontent.com/36288975/226189230-bf2d90dd-9695-4aaf-b2a6-6d66454e81fc.png)
+ <img height=450 width=450 src=https://user-images.githubusercontent.com/36288975/226189215-2d13ebfb-507f-44fc-b772-02232e97c0e3.png>
+<img height=450 width=450 src=https://user-images.githubusercontent.com/36288975/226189230-bf2d90dd-9695-4aaf-b2a6-6d66454e81fc.png>
 
-<img height=450 width=450 src=https://user-images.githubusercontent.com/36288975/226189280-ed5dcf1d-dd8d-43ae-815d-491085f4863b.png)
-
+<img height=450 width=450 src=https://user-images.githubusercontent.com/36288975/226189280-ed5dcf1d-dd8d-43ae-815d-491085f4863b.png>
 Step3: Configure Timer2 Peripheral To Operate In PWM Mode With CH1 Output
 <img height=450 width=450 src=https://github.com/vasanthkumarch/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/36288975/682c851a-7dfe-4089-8395-f76088d43896>
 
